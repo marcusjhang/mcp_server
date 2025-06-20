@@ -24,9 +24,9 @@ This repository demonstrates a fast setup for:
 
 - Python 3.10+ (recommended version: 3.12)
 - Install dependencies:
-  ```bash
+```bash
   pip install fastmcp openai pandas python-dotenv
-
+```
 	•	Ensure your .env includes:
 
 OPENAI_API_KEY=sk-xxx
@@ -72,3 +72,16 @@ LLM chose audit_exposure …
 	•	Executes business Python & makes internal LLM calls.
 	4.	Server returns JSON response.
 	5.	Agent captures and displays it.
+
+---
+
+## 🚧 Next Steps & Future Improvements
+
+1. **Expand the Toolset**  
+   Add more BookOps analytical tools—such as historical PnL comparison, VaR (Value at Risk) calculations, or trade anomaly detection. 
+
+2. **Add Session Memory and Context**  
+   Implement lightweight session memory for the agent to track past queries (e.g., remember last book/date asked, or support follow-up questions). 
+
+3. **Switch to Persistent HTTP Deployment**  
+   Move from launching the MCP server per query (STDIO mode) to a persistent HTTP-based deployment (via Flask, FastAPI, or fastmcp-http-proxy). 
