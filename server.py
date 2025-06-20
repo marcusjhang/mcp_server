@@ -53,9 +53,9 @@ def audit_exposure(book_id: str) -> dict:
     top = [{"sector": s, "exposure": float(q) / total_qty} for s, q in sector_exposure.items()]
     top.sort(key=lambda x: x['exposure'], reverse=True)
     top2 = top[:2]
+    exposure_str = ', '.join([f"{t['sector']} ({t['exposure']*100:.1f}%)" for t in top2])
     prompt = (
-        f"For book {book_id}, the top sector exposures are: "
-        f"{', '.join([f'{t['sector']} ({t['exposure']*100:.1f}%)' for t in top2])}. "
+        f"For book {book_id}, the top sector exposures are: {exposure_str}. "
         "Summarize these exposures and provide any relevant comments."
     )
     response = client.chat.completions.create(
