@@ -1,0 +1,6 @@
+book_id,symbol,sector,qty
+HF123,AAPL,Tech,100
+HF123,MSFT,Tech,200
+HF123,JNJ,Healthcare,80
+HF456,AMZN,Tech,30
+HF456,PFE,Healthcare,60
